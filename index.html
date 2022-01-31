@@ -5,42 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Recipes</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/blobz.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body>
     <div id="website-presentation">
       <div class="row-box">
         <div class="card">
-          <h1>Odin Recipes</h1>
-          <h3>
-            The website where you can find<br />the best chocolate recipes from
-            Brazil!
-          </h3>
-          <h3>
-            <a href="https://github.com/guilhermenakazato"
-              >Made by: Guilherme Nakazato</a
-            >
-          </h3>
+          <div class="box">
+            <h1>Odin Recipes</h1>
+            <h3>
+              The website where you can find<br />the best chocolate recipes
+              from Brazil!<br/>Made with love as a submission project<br/>for The Odin Project.
+            </h3>
+            <h3>
+              Made by:
+              <a href="https://github.com/guilhermenakazato">
+                Guilherme Nakazato</a
+              >
+            </h3>
+          </div>
+          <div class="logo"></div>
         </div>
-        <div class="card" id="photos-card"></div>
+
+        <div class="card" id="photos-card">
+          <h3>Here is a preview of the best this website can offer:</h3>
+          <div
+            class="gallery js-flickity"
+            data-flickity-options='{ "wrapAround": true }'
+          >
+            <div class="gallery-cell">
+              <img src="./assets/images/brigadeiro.jpeg" alt="Brigadeiro" />
+            </div>
+            <div class="gallery-cell">
+              <img
+                src="./assets/images/nega_maluca.jpg"
+                alt="Nega Maluca Cake"
+              />
+            </div>
+            <div class="gallery-cell">
+              <img src="./assets/images/pave.png" alt="Chocolate Trufle" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="spacer curves"></div>
 
-    <div>
+    <div id="recipes-section">
       <ul>
         <li><a href="recipes/brigadeiro.html">Brigadeiro</a></li>
         <li><a href="recipes/nega_maluca.html">Nega Maluca Cake</a></li>
         <li><a href="recipes/chocolate_pave.html">Chocolate Pavê</a></li>
       </ul>
     </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>
