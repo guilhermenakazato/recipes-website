@@ -19,44 +19,43 @@
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
   </head>
+  
   <body>
     <div id="website-presentation">
-      <div class="row-box">
-        <div class="card">
-          <div class="box">
-            <h1>Odin Recipes</h1>
-            <h3>
-              The website where you can find<br />the best chocolate recipes
-              from Brazil!<br/>Made with love as a submission project<br/>for The Odin Project.
-            </h3>
-            <h3>
-              Made by:
-              <a href="https://github.com/guilhermenakazato">
-                Guilherme Nakazato</a
-              >
-            </h3>
-          </div>
-          <div class="logo"></div>
+      <div class="card row">
+        <div class="logo">
+          <img alt="Odin Recipes Logo" src="./assets/images/odin_recipes.png"/>
         </div>
+        <div class="box column">
+          <h1>Odin Recipes</h1>
+          <h3>
+            The website where you can find<br />the best chocolate recipes from
+            Brazil!<br />Made with love as a submission<br/>project for The
+            Odin Project.
+          </h3>
+          <h3>
+            Made by:
+            <a href="https://github.com/guilhermenakazato">
+              Guilherme Nakazato</a
+            >
+          </h3>
+        </div>  
+      </div>
 
-        <div class="card" id="photos-card">
-          <h3>Here is a preview of the best this website can offer:</h3>
-          <div
-            class="gallery js-flickity"
-            data-flickity-options='{ "wrapAround": true }'
-          >
-            <div class="gallery-cell">
-              <img src="./assets/images/brigadeiro.jpeg" alt="Brigadeiro" />
-            </div>
-            <div class="gallery-cell">
-              <img
-                src="./assets/images/nega_maluca.jpg"
-                alt="Nega Maluca Cake"
-              />
-            </div>
-            <div class="gallery-cell">
-              <img src="./assets/images/pave.png" alt="Chocolate Trufle" />
-            </div>
+      <div class="card" id="photos-card">
+        <h3>Here is a preview of the best this website can offer:</h3>
+        <div
+          class="gallery js-flickity"
+          data-flickity-options='{ "wrapAround": true }'
+        >
+          <div class="gallery-cell">
+            <img src="./assets/images/brigadeiro.jpeg" alt="Brigadeiro" />
+          </div>
+          <div class="gallery-cell">
+            <img src="./assets/images/nega_maluca.jpg" alt="Nega Maluca Cake" />
+          </div>
+          <div class="gallery-cell">
+            <img src="./assets/images/pave.png" alt="Chocolate Trufle" />
           </div>
         </div>
       </div>
