@@ -62,7 +62,7 @@ body {
   border-radius: 6px;
   padding: 30px;
   height: 40vh;
-  width: 42vw;
+  width: 43vw;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -117,6 +117,7 @@ img {
 
 .logo {
   margin-right: 20px;
+  width: 65%;
 }
 
 .recipes-card {
