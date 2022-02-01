@@ -1,6 +1,6 @@
 :root {
-  --main-bg-color: #7b3f00;
-  --secondary-bg-color: #FFFDD0;
+  --main-color: #7b3f00;
+  --secondary-color: #FFFDD0;
   --text-color: #B87333;
 }
 
@@ -9,6 +9,11 @@
   margin: 0;
   font-family: "Nunito", sans-serif;
   color: var(--text-color);
+}
+
+h1 {
+  background-color: var(--secondary-color);
+  margin-bottom: 5px;
 }
 
 .column {
@@ -24,25 +29,36 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  text-align: center;
+  background-color: var(--secondary-color);
 }
 
 #website-presentation {
-  background-color: var(--main-bg-color);
+  background-color: var(--main-color);
   height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#website-presentation h1 {
+  margin-bottom: 0;
+}
+
 #recipes-section {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-color);
   flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 
 .card {
-  background-color: var(--secondary-bg-color);
+  background-color: var(--secondary-color);
   border-radius: 6px;
   padding: 30px;
   height: 40vh;
@@ -80,14 +96,14 @@ body {
 }
 
 .gallery {
-  background: var(--secondary-bg-color);
+  background: var(--secondary-color);
 }
 
 .gallery-cell {
   width: 100%;
   height: 32vh;
   margin-right: 10px;
-  background: var(--secondary-bg-color);
+  background: var(--secondary-color);
   counter-increment: gallery-cell;
 }
 
@@ -100,5 +116,48 @@ img {
 }
 
 .logo {
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+.recipes-card {
+  background-color: var(--main-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 22vw;
+  height: 75vh;
+  border-radius: 20px;
+  text-align: center;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recipes-card p {
+  color: var(--secondary-color);
+}
+
+.recipes-card img {
+  height: min-content;
+}
+
+.recipes-card h3 {
+  color: var(--secondary-color);
+  margin: 10px 0;
+}
+
+.recipes-card a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  border: 2px solid var(--secondary-color);
+  padding: 15px;
+  width: 90%;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: .25s;
+  text-align: center;
+}
+
+.recipes-card a:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
 }
