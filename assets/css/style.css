@@ -1,7 +1,7 @@
 :root {
   --main-color: #7b3f00;
-  --secondary-color: #FFFDD0;
-  --text-color: #B87333;
+  --secondary-color: #fffdd0;
+  --text-color: #b87333;
 }
 
 * {
@@ -9,11 +9,6 @@
   margin: 0;
   font-family: "Nunito", sans-serif;
   color: var(--text-color);
-}
-
-h1 {
-  background-color: var(--secondary-color);
-  margin-bottom: 5px;
 }
 
 .column {
@@ -30,49 +25,61 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  text-align: center;
   background-color: var(--secondary-color);
+}
+
+h1 {
+  background-color: var(--secondary-color);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 20px;
 }
 
 #website-presentation {
   background-color: var(--main-color);
-  height: 60vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
 }
 
 #website-presentation h1 {
   margin-bottom: 0;
 }
 
-#recipes-section {
-  background-color: var(--secondary-color);
-  flex-grow: 1;
-
+#presentation-card {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 }
-
 
 .card {
   background-color: var(--secondary-color);
   border-radius: 6px;
   padding: 30px;
-  height: 40vh;
+  height: 47vh;
   width: 43vw;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .box {
   justify-content: space-around;
+  height: 100%;
+  text-align: center;
+  
 }
 
 #photos-card {
   text-align: center;
+  justify-content: center;
 }
 
 #photos-card h3 {
@@ -97,35 +104,41 @@ body {
 
 .gallery {
   background: var(--secondary-color);
+  margin-bottom: 10px;
 }
 
 .gallery-cell {
   width: 100%;
-  height: 32vh;
+  height: 38vh;
   margin-right: 10px;
   background: var(--secondary-color);
   counter-increment: gallery-cell;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
 
-  border-radius: 20px;
-}
 
 .logo {
   margin-right: 20px;
   width: 65%;
 }
 
+#recipes-section {
+  background-color: var(--secondary-color);
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+}
+
+
 .recipes-card {
   background-color: var(--main-color);
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
-  width: 22vw;
-  height: 75vh;
+  width: 27vw;
+  height: auto;
   border-radius: 20px;
   text-align: center;
 
@@ -135,6 +148,7 @@ img {
 
 .recipes-card p {
   color: var(--secondary-color);
+  margin-bottom: 10px;
 }
 
 .recipes-card img {
@@ -154,11 +168,37 @@ img {
   width: 90%;
   border-radius: 20px;
   font-weight: bold;
-  transition: .25s;
+  transition: 0.25s;
   text-align: center;
 }
 
 .recipes-card a:hover {
   background-color: var(--secondary-color);
   color: var(--main-color);
+}
+
+@media only screen and (max-width: 768px) {
+  #presentation-card {
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+  }
+
+  .gallery-cell {
+    height: 33vh;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .recipes-card {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .card {
+    width: 100vw;
+  }
 }
