@@ -243,8 +243,17 @@ ul {
   margin-bottom: 20px;
 }
 
-#ingredients-card {
-  overflow-y: scroll;
+.ingredients-card {
+  overflow-y: auto;
+}
+
+.ingredients-card h1 {
+  margin-bottom: 10px;
+}
+
+.list-with-extra-margin {
+  margin-left: 40px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -260,8 +269,9 @@ ul {
     align-items: center;
   }
 
-  #ingredients-card {
+  .ingredients-card {
     height: auto;
+    overflow-y: hidden;
   }
 
   .gallery-cell {
