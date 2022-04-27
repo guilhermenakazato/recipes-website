@@ -62,19 +62,15 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px 0;
-  text-align: center;
-}
-
-footer h3 {
-  color: var(--secondary-color);
-}
-
-footer p {
-  color: var(--secondary-color);
+  padding: 30px;
+  text-align: center;  
 }
 
 footer a {
+  word-break: break-all;
+}
+
+footer h3, footer p, footer a {
   color: var(--secondary-color);
 }
 
@@ -222,6 +218,7 @@ ul {
   width: 100%;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .recipe-photo img {
@@ -289,18 +286,20 @@ ul {
 
 .instructions li p {
   color: var(--secondary-color);
+  word-wrap: break-word;
 }
 
 .instructions li span {
   position: absolute;
   top: -20px;
-  left: 43.5%;
+  left: 42%;
 
   height: 50px;
   width: 50px;
   background-color: var(--main-color);
   border-radius: 50%;
   color: var(--secondary-color);
+  z-index: -1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -342,10 +341,23 @@ ul {
     width: 100vw;
     height: auto;
   }
+
+  .instructions h1 {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   .card {
     width: 100vw;
+  }
+
+  .instructions li {
+    width: 40vw;
+  }
+
+  .recipe-photo {
+    width: 35%;
   }
 }
