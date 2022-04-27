@@ -266,12 +266,15 @@ ul {
   flex-direction: row;
   list-style: none;
   justify-content: center;
+
+  margin-top: 20px;
 }
 
 .instructions li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   padding: 30px;
   margin: 10px;
@@ -280,9 +283,23 @@ ul {
   height: 50vh;
   text-align: center;
   border-radius: 20px;
+
+  margin-bottom: 20px;
 }
 
 .instructions li p {
+  color: var(--secondary-color);
+}
+
+.instructions li span {
+  position: absolute;
+  top: -20px;
+  left: 43.5%;
+
+  height: 50px;
+  width: 50px;
+  background-color: var(--main-color);
+  border-radius: 50%;
   color: var(--secondary-color);
 }
 
@@ -319,6 +336,11 @@ ul {
 
   .recipes-card {
     width: 70vw;
+  }
+
+  .instructions li {
+    width: 100vw;
+    height: auto;
   }
 }
 
