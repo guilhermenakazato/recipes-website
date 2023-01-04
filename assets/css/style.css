@@ -11,37 +11,11 @@
   color: var(--text-color);
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
 body {
   display: flex;
   flex-direction: column;
   height: 100%;
   background-color: var(--secondary-color);
-}
-
-h1 {
-  background-color: var(--secondary-color);
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-
-  border-radius: 20px;
 }
 
 header {
@@ -64,6 +38,23 @@ footer {
   flex-wrap: wrap;
   padding: 30px;
   text-align: center;  
+}
+
+h1 {
+  font-size: 4vh;
+  background-color: var(--secondary-color);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.5vh;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 footer a {
@@ -92,6 +83,7 @@ ul {
 #presentation-card {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .card {
@@ -104,14 +96,20 @@ ul {
 }
 
 .box {
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4vh;
   height: 100%;
   text-align: center;
 }
 
 #photos-card {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
 }
 
 #photos-card h3 {
@@ -121,6 +119,20 @@ ul {
 
 #photos-card img {
   object-fit: contain;
+}
+
+.main-carousel {
+  width: 75%;
+  height: 80%;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-cell img {
+  height: 100%;
 }
 
 .spacer {
@@ -139,24 +151,10 @@ ul {
   background-image: url("../curves-bottom.svg");
 }
 
-.gallery {
-  background: var(--secondary-color);
-  margin-bottom: 10px;
-}
-
-.gallery-cell {
-  width: 100%;
-  height: 38vh;
-  margin-right: 10px;
-  background: var(--secondary-color);
-  counter-increment: gallery-cell;
-}
-
 .logo {
   margin-right: 20px;
-  width: 65%;
-
-  justify-content: center;
+  width: 47vh;
+  height: auto;
 }
 
 #recipes-section {
@@ -303,11 +301,25 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 8vw;
+  }
+  
+  h3 {
+    font-size: 5vw;
+  }
+
   #presentation-card {
     flex-direction: column;
-    height: 90vh;
+    height: auto;
     align-items: center;
   }
+
+  #photos-card {
+    height: auto;
+  }
+
+  
 
   #recipe-presentation {
     flex-direction: column;
@@ -320,12 +332,9 @@ ul {
     overflow-y: hidden;
   }
 
-  .gallery-cell {
-    height: 33vh;
-  }
-
   .logo {
     margin: 0;
+    width: 47vw;
   }
 
   .recipe-photo {
@@ -350,7 +359,7 @@ ul {
 
 @media only screen and (max-width: 1024px) {
   .card {
-    width: 100vw;
+    width: calc(100% - 80px);
   }
 
   .instructions li {

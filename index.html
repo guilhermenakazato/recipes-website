@@ -23,10 +23,10 @@
   <body>
     <header>
       <div class="card" id="presentation-card">
-        <div class="logo column">
+        <div class="logo">
           <img alt="Odin Recipes Logo" src="./assets/images/odin_recipes.png" />
         </div>
-        <div class="box column">
+        <div class="box">
           <h1>Odin Recipes</h1>
           <h3>
             The website where you can find<br />the best chocolate recipes from
@@ -42,19 +42,16 @@
         </div>
       </div>
 
-      <div class="card column" id="photos-card">
+      <div class="card" id="photos-card">
         <h3>Here is a preview of the best this website can offer:</h3>
-        <div
-          class="gallery js-flickity"
-          data-flickity-options='{ "wrapAround": true }'
-        >
-          <div class="gallery-cell">
+        <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
+          <div class="carousel-cell">
             <img src="./assets/images/brigadeiro.jpg" alt="Brigadeiro" />
           </div>
-          <div class="gallery-cell">
+          <div class="carousel-cell">
             <img src="./assets/images/nega_maluca.jpg" alt="Nega Maluca Cake" />
           </div>
-          <div class="gallery-cell">
+          <div class="carousel-cell">
             <img src="./assets/images/pave.jpg" alt="Chocolate Trufle (Pavê)" />
           </div>
         </div>
@@ -66,7 +63,7 @@
     <div>
       <h1>Our latest recipes</h1>
       <div id="recipes-section">
-        <div class="recipes-card column">
+        <div class="recipes-card">
           <div>
             <img src="./assets/images/brigadeiro.jpg" alt="Brigadeiro" />
             <h3>Brigadeiro</h3>
@@ -81,7 +78,7 @@
 
           <a href="recipes/brigadeiro.html">See Recipe</a>
         </div>
-        <div class="recipes-card column">
+        <div class="recipes-card">
           <div>
             <img src="./assets/images/nega_maluca.jpg" alt="Nega Maluca Cake" />
             <h3>Nega Maluca Cake</h3>
@@ -90,7 +87,8 @@
             "Nega Maluca Cake is a traditional Brazilian chocolate cake that is
             covered with a chocolate sauce ORRR with some sweet brigadeiro. It’s
             seriously the world’s easiest cake to make and possibly one of the
-            most delicious too!"<br /><br />- Aline Shaw on Brazilian Kitchen Abroad
+            most delicious too!"<br /><br />- Aline Shaw on Brazilian Kitchen
+            Abroad
           </p>
 
           <a href="recipes/nega_maluca.html">See Recipe</a>
