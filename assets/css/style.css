@@ -22,6 +22,7 @@ header {
   background-color: var(--main-color);
   height: auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -35,7 +36,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   padding: 30px;
   text-align: center;  
 }
@@ -84,6 +84,16 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-grow: 1;
+}
+
+#photos-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .card {
@@ -91,7 +101,7 @@ ul {
   border-radius: 6px;
   padding: 30px;
   height: 52vh;
-  width: 43vw;
+  width: 42vw;
   margin: 10px;
 }
 
@@ -104,17 +114,9 @@ ul {
   text-align: center;
 }
 
-#photos-card {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
 #photos-card h3 {
   margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 3vh;
 }
 
 #photos-card img {
@@ -319,7 +321,10 @@ ul {
     height: auto;
   }
 
-  
+  .main-carousel {
+    width: 90vw;
+    height: 50vw;
+  }
 
   #recipe-presentation {
     flex-direction: column;
@@ -358,15 +363,21 @@ ul {
 }
 
 @media only screen and (max-width: 1024px) {
-  .card {
-    width: calc(100% - 80px);
-  }
-
   .instructions li {
     width: 40vw;
   }
 
   .recipe-photo {
     width: 35%;
+  }
+}
+
+@media only screen and (orientation:portrait) {
+  .main-carousel {
+    width: 90%;
+  }
+
+  #photos-card h3 {
+    font-size: 5vw;
   }
 }
