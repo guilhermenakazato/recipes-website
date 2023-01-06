@@ -57,6 +57,7 @@ h1 {
 
 h3 {
   font-size: 2.5vh;
+  margin-left: 1vw;
 }
 
 img {
@@ -295,10 +296,9 @@ ul {
   margin: 10px;
   background-color: var(--main-color);
   width: 20vw;
-  height: 50vh;
+  height: auto;
   text-align: center;
   border-radius: 20px;
-
   margin-bottom: 20px;
 }
 
@@ -320,6 +320,19 @@ ul {
   z-index: -1;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.8vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #7b3f00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #fffdd0 0%, #b87333 100%);
+}
+
 @media only screen and (max-width: 768px) {
   /* tags */
   h1 {
@@ -328,6 +341,7 @@ ul {
   
   h3 {
     font-size: 5vw;
+    margin-left: 0.2vw;
   }
 
   p {
@@ -363,6 +377,7 @@ ul {
   .recipes-card {
     width: 70vw;
     gap: 4vw;
+    padding: 3.5vw;
   }
   
   .recipes-card img {
@@ -393,11 +408,6 @@ ul {
     width: 80%;
   }
 
-  .instructions li {
-    width: 100vw;
-    height: auto;
-  }
-
   .instructions h1 {
     margin-left: 5px;
     margin-right: 5px;
@@ -418,6 +428,10 @@ ul {
 @media only screen and (orientation:portrait) {
   .main-carousel {
     width: 90%;
+  }
+
+  .instructions li {
+    width: 100vw;
   }
 
   .recipe-presentation {
